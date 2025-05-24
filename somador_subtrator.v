@@ -1,4 +1,4 @@
-module top_module (
+module somador_subtrator(
     input  [7:0] a,
     input  [7:0] b,
     input        sel,       // 0: soma | 1: subtração
