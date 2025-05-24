@@ -11,10 +11,11 @@ module calculadora(
   // Considerando: 
   // entrada_A, entrada_B, carry_in (bit 3 do código) -> resultado_alu
   somador_subtrator alu_inst (
-    .A(entrada_A),
-    .B(entrada_B),
-    .carry_in(codigo[2]), // Bit mais significativo (011 = soma, 100 = subtração)
-    .S(resultado_alu)
+    .a(entrada_A),
+    .b(entrada_B),
+    .sel(codigo[2]),      // Bit mais significativo: 0 para soma, 1 para subtração
+    .result(resultado_alu),
+    .cout()               // Não usamos o carry de saída
   );
 
   // MUX de seleção da saída
